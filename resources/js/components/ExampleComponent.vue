@@ -6,7 +6,7 @@
                     <div class="card-header">Example Component</div>
 
                     <div class="card-body">
-                        HUE BR XABLAU da zoeira
+                        HUE BR XABLAU da zoeira 
                     </div>
                 </div>
             </div>
