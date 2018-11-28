@@ -47712,8 +47712,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted.');
+    props: ['qtd', 'titulo', 'url', 'cor', 'icone'],
+    computed: {
+        defineCor: function defineCor() {
+            return 'background-color: ' + this.cor + ' !important;';
+        }
     }
 });
 
@@ -47725,28 +47728,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "small-box", style: _vm.defineCor }, [
+    _c("div", { staticClass: "inner" }, [
+      _c("h3", [_vm._v(_vm._s(_vm.qtd))]),
+      _vm._v(" "),
+      _c("p", [_vm._v(_vm._s(_vm.titulo))])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "icon" }, [_c("i", { class: _vm.icone })]),
+    _vm._v(" "),
+    _vm._m(0)
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "small-box bg-aqua" }, [
-      _c("div", { staticClass: "inner" }, [
-        _c("h3", [_vm._v("150")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("New Orders")])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "icon" }, [
-        _c("i", { staticClass: "ion ion-stats-bars" })
-      ]),
-      _vm._v(" "),
-      _c("a", { staticClass: "small-box-footer", attrs: { href: "#" } }, [
-        _vm._v("\n        More info "),
-        _c("i", { staticClass: "fa fa-arrow-circle-right" })
-      ])
+    return _c("a", { staticClass: "small-box-footer", attrs: { href: "#" } }, [
+      _vm._v("\n        Ver mais "),
+      _c("i", { staticClass: "fa fa-arrow-circle-right" })
     ])
   }
 ]
@@ -47794,7 +47795,7 @@ exports = module.exports = __webpack_require__(48)(false);
 
 
 // module
-exports.push([module.i, "\n.bg-aqua {\r\n    background-color: #00c0ef !important;\n}\n.small-box {\r\n    border-radius: 2px;\r\n    position: relative;\r\n    display: block;\r\n    margin-bottom: 20px;\r\n    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);\r\n            box-shadow: 0 1px 1px rgba(0,0,0,0.1);\n}\n.small-box > .inner {\r\n    padding: 10px;\n}\n.small-box h3, .small-box p {\r\n    z-index: 5;\n}\n.small-box h3 {\r\n    font-size: 38px;\r\n    font-weight: bold;\r\n    margin: 0 0 10px 0;\r\n    white-space: nowrap;\r\n    padding: 0;\n}\n.small-box p {\r\n    font-size: 15px;\n}\np {\r\n    margin: 0 0 10px;\n}\n.small-box .icon {\r\n    -webkit-transition: all .3s linear;\r\n    transition: all .3s linear;\r\n    position: absolute;\r\n    top: -10px;\r\n    right: 10px;\r\n    z-index: 0;\r\n    font-size: 90px;\r\n    color: rgba(0,0,0,0.15);\n}\n.small-box > .small-box-footer {\r\n    position: relative;\r\n    text-align: center;\r\n    padding: 3px 0;\r\n    color: #fff;\r\n    color: rgba(255,255,255,0.8);\r\n    display: block;\r\n    z-index: 10;\r\n    background: rgba(0,0,0,0.1);\r\n    text-decoration: none;\n}\na {\r\n    color: #3c8dbc;\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, "\n.bg-aqua {\r\n    background-color: #00c0ef !important;\n}\n.small-box {\r\n    border-radius: 2px;\r\n    position: relative;\r\n    display: block;\r\n    margin-bottom: 20px;\r\n    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);\r\n            box-shadow: 0 1px 1px rgba(0,0,0,0.1);\r\n    color: white;\n}\n.small-box:hover {\r\n    text-decoration: none;\r\n    color: #f9f9f9;\n}\n.small-box:hover .icon {\r\n    font-size: 95px;\n}\n.small-box > .small-box-footer:hover {\r\n    color: #fff;\r\n    background: rgba(0,0,0,0.15);\n}\n.small-box > .inner {\r\n    padding: 10px;\n}\n.small-box h3, .small-box p {\r\n    z-index: 5;\n}\n.small-box h3 {\r\n    font-size: 38px;\r\n    font-weight: bold;\r\n    margin: 0 0 10px 0;\r\n    white-space: nowrap;\r\n    padding: 0;\n}\n.small-box p {\r\n    font-size: 15px;\n}\np {\r\n    margin: 0 0 10px;\n}\n.small-box .icon {\r\n    -webkit-transition: all .3s linear;\r\n    transition: all .3s linear;\r\n    position: absolute;\r\n    top: -10px;\r\n    right: 10px;\r\n    z-index: 0;\r\n    font-size: 90px;\r\n    color: rgba(0,0,0,0.15);\n}\n.small-box > .small-box-footer {\r\n    position: relative;\r\n    text-align: center;\r\n    padding: 3px 0;\r\n    color: #fff;\r\n    color: rgba(255,255,255,0.8);\r\n    display: block;\r\n    z-index: 10;\r\n    background: rgba(0,0,0,0.1);\r\n    text-decoration: none;\n}\na {\r\n    color: #3c8dbc;\n}\r\n\r\n\r\n", ""]);
 
 // exports
 

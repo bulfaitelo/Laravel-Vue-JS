@@ -8,23 +8,20 @@
                     BLA BLA BLA
                     <div class="row">
                         <div class="col-md-4">
-                                <caixa></caixa>
+                            <caixa qtd="80" titulo="Artigos" url="#" cor="orange" icone="ion ion-stats-bars"></caixa>
                         </div>
                         <div class="col-md-4">
-                                <painel titulo="XABLAU" cor='danger'> 
-                                        XABLAU
-                                </painel>
+                            <caixa qtd="080" titulo="Usuarios" url="#" cor="blue" icone="ion ion-person-stalker"></caixa>
+                           
                         </div>
                         <div class="col-md-4">
-                                <painel titulo="XABLAU"> 
-                                        XABLAU
-                                </painel>
+                            <caixa qtd="129" titulo="Autores" url="#" cor="red" icone="ion ion-person"></caixa>
+
                         </div>
                     </div>
                 </painel>
                 
             </div>
-        </div>
-        <caixa></caixa>
+        </div>    
     </div>
 @endsection
