@@ -47738,20 +47738,13 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "icon" }, [_c("i", { class: _vm.icone })]),
     _vm._v(" "),
-    _vm._m(0)
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "small-box-footer", attrs: { href: "#" } }, [
+    _c("a", { staticClass: "small-box-footer", attrs: { href: _vm.url } }, [
       _vm._v("\n        Ver mais "),
       _c("i", { staticClass: "fa fa-arrow-circle-right" })
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
