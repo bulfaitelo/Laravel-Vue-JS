@@ -48247,9 +48247,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['titulos', 'itens', 'criar', 'detalhe', 'editar', 'deletar', 'token']
+    props: ['titulos', 'itens', 'criar', 'detalhe', 'editar', 'deletar', 'token'],
+    methods: {
+        executaForm: function executaForm(index) {
+            document.getElementById(index).submit();
+        }
+    }
 });
 
 /***/ }),
@@ -48284,7 +48297,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "tbody",
-        _vm._l(_vm.itens, function(item) {
+        _vm._l(_vm.itens, function(item, index) {
           return _c(
             "tr",
             [
@@ -48295,20 +48308,59 @@ var render = function() {
               _vm.detalhe || _vm.editar || _vm.deletar
                 ? _c("td", [
                     _vm.deletar && _vm.token
-                      ? _c("form", { attrs: { action: "index.html" } }, [
-                          _c("input", {
+                      ? _c(
+                          "form",
+                          {
                             attrs: {
-                              type: "hidden",
-                              name: "_method",
-                              value: "DELETE"
+                              id: index,
+                              action: _vm.deletar,
+                              method: "POST"
                             }
-                          }),
-                          _vm._v(" "),
-                          _c("input", {
-                            attrs: { type: "hidden", name: "_token" },
-                            domProps: { value: _vm.token }
-                          }),
-                          _vm._v(" "),
+                          },
+                          [
+                            _c("input", {
+                              attrs: {
+                                type: "hidden",
+                                name: "_method",
+                                value: "DELETE"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("input", {
+                              attrs: { type: "hidden", name: "_token" },
+                              domProps: { value: _vm.token }
+                            }),
+                            _vm._v(" "),
+                            _vm.detalhe
+                              ? _c("a", { attrs: { href: _vm.detalhe } }, [
+                                  _vm._v("Detalhe | ")
+                                ])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _vm.editar
+                              ? _c("a", { attrs: { href: _vm.editar } }, [
+                                  _vm._v("Editar | ")
+                                ])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                attrs: { href: "#" },
+                                on: {
+                                  click: function($event) {
+                                    _vm.executaForm(index)
+                                  }
+                                }
+                              },
+                              [_vm._v("Deletar")]
+                            )
+                          ]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    !_vm.token
+                      ? _c("span", [
                           _vm.detalhe
                             ? _c("a", { attrs: { href: _vm.detalhe } }, [
                                 _vm._v("Detalhe | ")
@@ -48317,13 +48369,29 @@ var render = function() {
                           _vm._v(" "),
                           _vm.editar
                             ? _c("a", { attrs: { href: _vm.editar } }, [
-                                _vm._v("Editar | ")
+                                _vm._v("Editar")
                               ])
                             : _vm._e(),
                           _vm._v(" "),
                           _vm.deletar
                             ? _c("a", { attrs: { href: _vm.deletar } }, [
                                 _vm._v("Deletar")
+                              ])
+                            : _vm._e()
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.token && !_vm.deletar
+                      ? _c("span", [
+                          _vm.detalhe
+                            ? _c("a", { attrs: { href: _vm.detalhe } }, [
+                                _vm._v("Detalhe | ")
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.editar
+                            ? _c("a", { attrs: { href: _vm.editar } }, [
+                                _vm._v("Editar")
                               ])
                             : _vm._e()
                         ])
