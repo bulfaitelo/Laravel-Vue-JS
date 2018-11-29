@@ -23,8 +23,7 @@
                             <input type="hidden" name="_token" v-bind:value="token">
                             <a v-if="detalhe" v-bind:href="detalhe" >Detalhe | </a>
                             <a v-if="editar" v-bind:href="editar" >Editar | </a>                            
-                            <a href="#" v-on:click="executaForm(index)">Deletar</a>                  
-
+                            <a href="#" v-on:click="executaZorm(index)">Deletar</a>
                         </form>
                         <span v-if="!token" >
                             <a v-if="detalhe" v-bind:href="detalhe" >Detalhe | </a>
