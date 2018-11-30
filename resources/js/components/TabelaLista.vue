@@ -10,7 +10,7 @@
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th  v-bind:key="titulo.id" v-for="titulo in titulos">{{titulo}}</th>                    
+                    <th style="cursor:pointer;" v-on:click="ordenaColuna(index)"  v-bind:key="titulo.id" v-for="(titulo, index) in titulos"><b>{{titulo}}</b></th>                    
                     <th v-if="detalhe || editar || deletar"  >Ação</th>
                 </tr>
             </thead>
@@ -53,12 +53,20 @@
         methods:{
             executaForm: function (index) {
                 document.getElementById(index).submit();
+            },
+            ordenaColuna: function (coluna) {
+                this.ordemcol = coluna;
+                if(this.ordem.toLowerCase() == 'asc'){
+                    this.ordem = 'desc';
+                } else {
+                    this.ordem = 'asc';
+                }
             }
         },
         computed:{
             lista:function () {
                 let ordem = this.ordem || "asc";
-                let ordemCol = this.ordemcol|| 0;
+                let ordemCol = this.ordemcol || 0;
                 ordem = ordem.toLowerCase();
                 ordemCol = parseInt(ordemCol);
 
