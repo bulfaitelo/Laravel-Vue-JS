@@ -48256,7 +48256,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     props: ['titulos', 'itens', 'criar', 'detalhe', 'editar', 'deletar', 'token', 'ordem', 'ordemcol'],
     data: function data() {
         return {
-            buscar: ''
+            buscar: '',
+            ordemAux: this.ordem || "asc",
+            ordemAuxCol: this.ordemcol || '0'
         };
     },
     methods: {
@@ -48264,11 +48266,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             document.getElementById(index).submit();
         },
         ordenaColuna: function ordenaColuna(coluna) {
-            this.ordemcol = coluna;
-            if (this.ordem.toLowerCase() == 'asc') {
-                this.ordem = 'desc';
+            this.ordemAuxCol = coluna;
+            if (this.ordemAux.toLowerCase() == 'asc') {
+                this.ordemAux = 'desc';
             } else {
-                this.ordem = 'asc';
+                this.ordemAux = 'asc';
             }
         }
     },
@@ -48276,8 +48278,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         lista: function lista() {
             var _this = this;
 
-            var ordem = this.ordem || "asc";
-            var ordemCol = this.ordemcol || 0;
+            var ordem = this.ordemAux;
+            var ordemCol = this.ordemAuxCol;
             ordem = ordem.toLowerCase();
             ordemCol = parseInt(ordemCol);
 
@@ -48392,9 +48394,10 @@ var render = function() {
         _vm._l(_vm.lista, function(item, index) {
           return _c(
             "tr",
+            { key: item.id },
             [
               _vm._l(item, function(i) {
-                return _c("td", [_vm._v(_vm._s(i))])
+                return _c("td", { key: i.id }, [_vm._v(_vm._s(i))])
               }),
               _vm._v(" "),
               _vm.detalhe || _vm.editar || _vm.deletar
