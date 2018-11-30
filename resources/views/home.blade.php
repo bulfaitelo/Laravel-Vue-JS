@@ -3,6 +3,7 @@
 @section('content')
 <pagina tamanho='10'>
     <painel titulo="TITULO DO XABLAU" > 
+        <migalhas v-bind:lista="{{$listaMigalhas}}" ></migalhas>
         BLA BLA BLA
         <div class="row">
             <div class="col-md-4">
