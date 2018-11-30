@@ -13988,7 +13988,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(57);
+module.exports = __webpack_require__(60);
 
 
 /***/ }),
@@ -14017,7 +14017,7 @@ Vue.component('topo', __webpack_require__(40));
 Vue.component('painel', __webpack_require__(43));
 Vue.component('caixa', __webpack_require__(46));
 Vue.component('pagina', __webpack_require__(54));
-Vue.component('tabela-lista', __webpack_require__(61));
+Vue.component('tabela-lista', __webpack_require__(57));
 
 var app = new Vue({
   el: '#app'
@@ -47610,7 +47610,7 @@ var content = __webpack_require__(48);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(50)("a4edf71e", content, false, {});
+var update = __webpack_require__(50)("54b0d2e4", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -48156,23 +48156,14 @@ if (false) {
 
 /***/ }),
 /* 57 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(2)
 /* script */
-var __vue_script__ = __webpack_require__(62)
+var __vue_script__ = __webpack_require__(58)
 /* template */
-var __vue_template__ = __webpack_require__(63)
+var __vue_template__ = __webpack_require__(59)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -48211,7 +48202,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 62 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48262,7 +48253,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['titulos', 'itens', 'criar', 'detalhe', 'editar', 'deletar', 'token'],
+    props: ['titulos', 'itens', 'criar', 'detalhe', 'editar', 'deletar', 'token', 'ordem', 'ordemcol'],
     data: function data() {
         return {
             buscar: ''
@@ -48276,6 +48267,33 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     computed: {
         lista: function lista() {
             var _this = this;
+
+            var ordem = this.ordem || "asc";
+            var ordemCol = this.ordemcol || 0;
+            ordem = ordem.toLowerCase();
+            ordemCol = parseInt(ordemCol);
+
+            if (ordem == 'asc') {
+                this.itens.sort(function (a, b) {
+                    if (a[ordemCol] > b[ordemCol]) {
+                        return 1;
+                    }
+                    if (a[ordemCol] < b[ordemCol]) {
+                        return -1;
+                    }
+                    return 0;
+                });
+            } else {
+                this.itens.sort(function (a, b) {
+                    if (a[ordemCol] < b[ordemCol]) {
+                        return 1;
+                    }
+                    if (a[ordemCol] > b[ordemCol]) {
+                        return -1;
+                    }
+                    return 0;
+                });
+            }
 
             return this.itens.filter(function (res) {
                 for (var k = 0; k < res.length; k++) {
@@ -48292,7 +48310,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 63 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -48338,7 +48356,7 @@ var render = function() {
           "tr",
           [
             _vm._l(_vm.titulos, function(titulo) {
-              return _c("th", [_vm._v(_vm._s(titulo))])
+              return _c("th", { key: titulo.id }, [_vm._v(_vm._s(titulo))])
             }),
             _vm._v(" "),
             _vm.detalhe || _vm.editar || _vm.deletar
@@ -48469,6 +48487,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-1d289183", module.exports)
   }
 }
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

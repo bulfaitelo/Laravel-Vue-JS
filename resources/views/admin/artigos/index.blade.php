@@ -14,6 +14,8 @@
             editar="#editar"
             deletar="#deletar"
             token="123123"
+            ordem="asc"
+            ordemcol="2"
             ></tabela-lista>        
     </painel>  
 </pagina>
