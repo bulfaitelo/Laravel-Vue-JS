@@ -4,7 +4,7 @@
 <pagina tamanho='12'>
     <painel titulo="Lista de Artigos" >     
     <migalhas v-bind:lista="{{$listaMigalhas}}" ></migalhas>
-        <modallink tipo='button' nome='MeuModalTEste' titulo="Criar" css="" ></modallink>
+        
         <tabela-lista 
             v-bind:titulos="['#', 'Outros', 'Descricao']"
             v-bind:itens="{{$listaArtigos}}"
@@ -15,6 +15,7 @@
             token="123123"
             ordem="asc"
             ordemcol="2"
+            modal="sim"
             ></tabela-lista>        
     </painel>  
 </pagina>

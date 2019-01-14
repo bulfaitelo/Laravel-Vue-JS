@@ -1,5 +1,5 @@
 <template>
-<div>
+<spam>
     <button v-if="tipo == 'button'" type="button" v-bind:class="css || 'btn btn-primary'" data-toggle="modal" v-bind:data-target="'#'+ nome">
     {{titulo}}
     </button>
@@ -7,7 +7,7 @@
     {{titulo}}
     </button>
     <a v-if="tipo == 'link'" data-toggle="modal" v-bind:class="css" v-bind:data-target="'#'+ nome" href="#">{{titulo}}</a>
-</div>
+</spam>
 </template>
 
 <script>

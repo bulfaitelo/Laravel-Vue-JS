@@ -2,7 +2,8 @@
 <div>
 
     <div class="">
-        <a class="btn btn-info" v-if="criar" v-bind:href="criar" >Criar</a>
+        <a class="btn btn-info" v-if="criar && !modal" v-bind:href="criar" >Criar</a>
+        <modallink v-if="criar && modal" tipo='button' nome='MeuModalTEste' titulo="Criar" css="" ></modallink>
         <div class="form-group pull-right">
             <input type="search" class="form-control"  placeholder="Buscar" v-model="buscar">
         </div>
@@ -44,7 +45,7 @@
 
 <script>
     export default {
-        props: ['titulos', 'itens', 'criar', 'detalhe', 'editar', 'deletar', 'token', 'ordem', 'ordemcol'],
+        props: ['titulos', 'itens', 'criar', 'detalhe', 'editar', 'deletar', 'token', 'ordem', 'ordemcol', 'modal'],
         data: function () {
             return {
                 buscar: '',
