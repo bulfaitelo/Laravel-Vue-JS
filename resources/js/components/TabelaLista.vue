@@ -74,29 +74,30 @@
 
                 if (ordem == 'asc'){
                     this.itens.sort( function (a,b) {
-                        if(a[ordemCol] > b[ordemCol] ){ return 1; }
-                        if(a[ordemCol] < b[ordemCol] ){ return -1; }                    
+                        if(Object.values(a)[ordemCol] > Object.values(b)[ordemCol] ){ return 1; }
+                        if(Object.values(a)[ordemCol] < Object.values(b)[ordemCol] ){ return -1; }                    
                         return 0;
                         
                     });
                 } else{
                     this.itens.sort( function (a,b) {
-                        if(a[ordemCol] < b[ordemCol] ){ return 1; }
-                        if(a[ordemCol] > b[ordemCol] ){ return -1; }                    
+                        if(Object.values(a)[ordemCol] < Object.values(b)[ordemCol] ){ return 1; }
+                        if(Object.values(a)[ordemCol] > Object.values(b)[ordemCol] ){ return -1; }                    
                         return 0;
                         
                     });
                 }
 
-                
-                return this.itens.filter(res => {
-                    for(let k  = 0; k < res.length; k++){
-                        if((res[k] + "").toLowerCase().indexOf(this.buscar.toLowerCase()) >=0 ){
-                            return true;
+                if(this.buscar){
+                    return this.itens.filter(res => {
+                        for(let k  = 0; k < res.length; k++){
+                            if((res[k] + "").toLowerCase().indexOf(this.buscar.toLowerCase()) >=0 ){
+                                return true;
+                            }
                         }
-                    }
-                     return false;
-                });
+                         return false;
+                    });
+                }
 
 
                 return this.itens;

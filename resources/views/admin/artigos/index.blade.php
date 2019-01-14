@@ -7,10 +7,7 @@
         <modallink tipo='button' nome='MeuModalTEste' titulo="Criar" css="" ></modallink>
         <tabela-lista 
             v-bind:titulos="['#', 'Outros', 'Descricao']"
-            v-bind:itens="[
-                [1, 'PHP OO', 'Curso de PHP'], 
-                [2, 'Vue OO', 'Curso de PHP'], 
-                [3, 'Xablau OO', 'XOXO de PHP']]"
+            v-bind:itens="{{$listaArtigos}}"
             criar="#criar"
             detalhe="#detalhe"
             editar="#editar"
