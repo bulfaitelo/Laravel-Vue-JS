@@ -2,11 +2,9 @@
 
 @section('content')
 <pagina tamanho='12'>
-    <painel titulo="Lista de Artigos" > 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#MeuModalTEst">
-    Launch demo modal
-    </button>
+    <painel titulo="Lista de Artigos" >     
     <migalhas v-bind:lista="{{$listaMigalhas}}" ></migalhas>
+        <modallink tipo='button' nome='MeuModalTEste' titulo="Criar" css="" ></modallink>
         <tabela-lista 
             v-bind:titulos="['#', 'Outros', 'Descricao']"
             v-bind:itens="[
@@ -24,7 +22,7 @@
     </painel>  
 </pagina>
 
-<modal nome='MeuModalTEst' >
+<modal nome='MeuModalTEste' >
     <painel titulo="Adicionar" > 
         <form>
         <div class="form-group">
