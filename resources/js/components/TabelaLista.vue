@@ -2,6 +2,7 @@
 <div>
 
     <div class="">
+        <p>{{this.$store.state.itens}}</p>
         <a class="btn btn-info" v-if="criar && !modal" v-bind:href="criar" >Criar</a>
         <modallink v-if="criar && modal" tipo='button' nome='adicionar' titulo="Criar" css="" ></modallink>
         <div class="form-group pull-right">
@@ -70,6 +71,11 @@
         },
         computed:{
             lista:function () {
+
+                this.$store.commit('setItens', {
+                    opa:"Ok"
+                });
+
                 let ordem = this.ordemAux;
                 let ordemCol = this.ordemAuxCol;
                 ordem = ordem.toLowerCase();
