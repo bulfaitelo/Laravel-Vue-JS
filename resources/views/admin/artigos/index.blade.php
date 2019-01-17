@@ -20,7 +20,7 @@
     </painel>  
 </pagina>
 
-<modal nome='MeuModalTEste' >
+<modal nome='adicionar' >
     <painel titulo="Adicionar" > 
         <formulario css="" action="#" method="put" enctype="mulpart/form-data" token="123" >
             <div class="form-group">
@@ -35,4 +35,21 @@
         </formulario>
     </painel>
 </modal>
+
+<modal nome='editar' >
+    <painel titulo="Editar" > 
+        <formulario css="" action="#" method="put" enctype="mulpart/form-data" token="123" >
+            <div class="form-group">
+                <label for="titulo">Título</label>
+                <input type="text" class='form-control' id='titulo' name='titulo' placeholder="Título">
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <input type="text" class='form-control' id='descricao' name='descricao' placeholder="Descrição">
+            </div>
+            <button class="btn btn-info" > Adicionar</button>
+        </formulario>
+    </painel>
+</modal>
+
 @endsection

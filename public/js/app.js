@@ -13988,7 +13988,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(69);
+module.exports = __webpack_require__(72);
 
 
 /***/ }),
@@ -14021,7 +14021,7 @@ Vue.component('tabela-lista', __webpack_require__(57));
 Vue.component('migalhas', __webpack_require__(60));
 Vue.component('modal', __webpack_require__(63));
 Vue.component('modallink', __webpack_require__(66));
-Vue.component('formulario', __webpack_require__(73));
+Vue.component('formulario', __webpack_require__(69));
 
 var app = new Vue({
   el: '#app'
@@ -47614,7 +47614,7 @@ var content = __webpack_require__(48);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(50)("a4edf71e", content, false, {});
+var update = __webpack_require__(50)("54b0d2e4", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -48256,6 +48256,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['titulos', 'itens', 'criar', 'detalhe', 'editar', 'deletar', 'token', 'ordem', 'ordemcol', 'modal'],
@@ -48351,7 +48353,7 @@ var render = function() {
           ? _c("modallink", {
               attrs: {
                 tipo: "button",
-                nome: "MeuModalTEste",
+                nome: "adicionar",
                 titulo: "Criar",
                 css: ""
               }
@@ -48457,10 +48459,21 @@ var render = function() {
                                 ])
                               : _vm._e(),
                             _vm._v(" "),
-                            _vm.editar
+                            _vm.editar && !_vm.modal
                               ? _c("a", { attrs: { href: _vm.editar } }, [
                                   _vm._v("Editar | ")
                                 ])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _vm.editar && _vm.modal
+                              ? _c("modallink", {
+                                  attrs: {
+                                    tipo: "link",
+                                    nome: "editar",
+                                    titulo: "Editar | ",
+                                    css: ""
+                                  }
+                                })
                               : _vm._e(),
                             _vm._v(" "),
                             _c(
@@ -48475,30 +48488,46 @@ var render = function() {
                               },
                               [_vm._v("Deletar")]
                             )
-                          ]
+                          ],
+                          1
                         )
                       : _vm._e(),
                     _vm._v(" "),
                     !_vm.token
-                      ? _c("span", [
-                          _vm.detalhe
-                            ? _c("a", { attrs: { href: _vm.detalhe } }, [
-                                _vm._v("Detalhe | ")
-                              ])
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.editar
-                            ? _c("a", { attrs: { href: _vm.editar } }, [
-                                _vm._v("Editar")
-                              ])
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.deletar
-                            ? _c("a", { attrs: { href: _vm.deletar } }, [
-                                _vm._v("Deletar")
-                              ])
-                            : _vm._e()
-                        ])
+                      ? _c(
+                          "span",
+                          [
+                            _vm.detalhe
+                              ? _c("a", { attrs: { href: _vm.detalhe } }, [
+                                  _vm._v("Detalhe | ")
+                                ])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _vm.editar && !_vm.modal
+                              ? _c("a", { attrs: { href: _vm.editar } }, [
+                                  _vm._v("Editar")
+                                ])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _vm.editar && _vm.modal
+                              ? _c("modallink", {
+                                  attrs: {
+                                    tipo: "link",
+                                    nome: "editar",
+                                    titulo: "Editar | ",
+                                    css: ""
+                                  }
+                                })
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _vm.deletar
+                              ? _c("a", { attrs: { href: _vm.deletar } }, [
+                                  _vm._v("Deletar")
+                                ])
+                              : _vm._e()
+                          ],
+                          1
+                        )
                       : _vm._e(),
                     _vm._v(" "),
                     _vm.token && !_vm.deletar
@@ -48509,7 +48538,7 @@ var render = function() {
                               ])
                             : _vm._e(),
                           _vm._v(" "),
-                          _vm.editar
+                          _vm.editar && !_vm.modal
                             ? _c("a", { attrs: { href: _vm.editar } }, [
                                 _vm._v("Editar")
                               ])
@@ -48922,23 +48951,14 @@ if (false) {
 
 /***/ }),
 /* 69 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(74)
+var __vue_script__ = __webpack_require__(70)
 /* template */
-var __vue_template__ = __webpack_require__(75)
+var __vue_template__ = __webpack_require__(71)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -48977,7 +48997,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 74 */
+/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49020,7 +49040,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 75 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -49071,6 +49091,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-c3f6ecc6", module.exports)
   }
 }
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
