@@ -6,7 +6,7 @@
                     <div class="card-header">Example Component</div>
 
                     <div class="card-body">
-                       trdfdsfds
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tenetur praesentium odit dolor dignissimos obcaecati autem provident neque, nulla minus reiciendis enim eos ullam assumenda expedita harum asperiores officia molestiae!
                     </div>
                 </div>
             </div>

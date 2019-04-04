@@ -36868,7 +36868,9 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _vm._v("\n                   trdfdsfds\n                ")
+              _vm._v(
+                "\n                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tenetur praesentium odit dolor dignissimos obcaecati autem provident neque, nulla minus reiciendis enim eos ullam assumenda expedita harum asperiores officia molestiae!\n                "
+              )
             ])
           ])
         ])
