@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<pagina tamanho="50">
+<pagina tamanho="10">
     <painel titulo="xablau do caralho">
         <div class="row">
             <div class="col-4">
-                <caixa qtd="80" titulo="Artigos" url="#" cor="orange" icone="ion ion-pie-graph" ></caixa>
+                <caixa qtd="80" titulo="Artigos" url="tete" cor="orange" icone="ion ion-pie-graph" ></caixa>
             </div>
             <div class="col-4">
                 <caixa qtd="1500" titulo="Usuários" url="#" cor="blue" icone="ion ion-person-stalker" ></caixa>                        
