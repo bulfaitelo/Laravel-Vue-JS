@@ -1,5 +1,5 @@
 <template>
- <div class="card">
+ <div v-bind:class="defineCor">
     <div class="card-header">{{titulo}}</div>
 
     <div class="card-body">
@@ -11,7 +11,12 @@
 <script>
     export default {
         props: [
-            'titulo'
-        ]
+            'titulo', 'cor'
+        ],
+        computed: {
+            defineCor: function() {
+                return "card " + (this.cor|| "");
+            }
+        }
     }
 </script>

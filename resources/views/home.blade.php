@@ -7,17 +7,17 @@
             <painel titulo="xablau do caralho">
                 <div class="row">
                     <div class="col">
-                        <painel titulo="xablau do caralho">
+                        <painel cor="bg-primary" titulo="xablau do caralho">
                             perereca miole
                         </painel>
                     </div>
                     <div class="col">
-                        <painel titulo="xablau do caralho">
+                        <painel cor="bg-warning" titulo="xablau do caralho">
                             opa 
                         </painel>
                     </div>
                     <div class="col">
-                            <painel titulo="xablau do caralho">
+                            <painel cor="bg-danger" titulo="xablau do caralho">
                                 opa 
                             </painel>
                         </div>

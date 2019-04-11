@@ -1774,7 +1774,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['titulo']
+  props: ['titulo', 'cor'],
+  computed: {
+    defineCor: function defineCor() {
+      return "card " + (this.cor || "");
+    }
+  }
 });
 
 /***/ }),
@@ -36884,7 +36889,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card" }, [
+  return _c("div", { class: _vm.defineCor }, [
     _c("div", { staticClass: "card-header" }, [_vm._v(_vm._s(_vm.titulo))]),
     _vm._v(" "),
     _c("div", { staticClass: "card-body" }, [_vm._t("default")], 2)
