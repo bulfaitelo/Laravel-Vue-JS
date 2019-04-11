@@ -7,18 +7,14 @@
             <painel titulo="xablau do caralho">
                 <div class="row">
                     <div class="col-4">
-                        <caixa></caixa>
+                        <caixa qtd="80" titulo="Artigos" url="#" cor="orange" icone="ion ion-pie-graph" ></caixa>
                     </div>
                     <div class="col-4">
-                        <painel cor="bg-warning" titulo="xablau do caralho">
-                            opa 
-                        </painel>
+                        <caixa qtd="1500" titulo="Usuários" url="#" cor="blue" icone="ion ion-person-stalker" ></caixa>                        
                     </div>
                     <div class="col-4">
-                            <painel cor="bg-danger" titulo="xablau do caralho">
-                                opa 
-                            </painel>
-                        </div>
+                        <caixa qtd="3" titulo="Autores" url="#" cor="red" icone="ion ion-person" ></caixa>                           
+                    </div>
                 </div>                
             </painel>
         </div>
