@@ -6,17 +6,15 @@
         <div class="col-md-10">
             <painel titulo="xablau do caralho">
                 <div class="row">
-                    <div class="col">
-                        <painel cor="bg-primary" titulo="xablau do caralho">
-                            perereca miole
-                        </painel>
+                    <div class="col-4">
+                        <caixa></caixa>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                         <painel cor="bg-warning" titulo="xablau do caralho">
                             opa 
                         </painel>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                             <painel cor="bg-danger" titulo="xablau do caralho">
                                 opa 
                             </painel>
