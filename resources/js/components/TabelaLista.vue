@@ -8,51 +8,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Titulo ...</td>
-                <td>xablau</td>
-                <td>Thiago</td>
-                <td>11/04/2019</td>
+            <tr v-for="item in itens" v-bind:key="item.id">
+                <td v-for="i in item" v-bind:key="i.id">{{i}}</td>                
                 <td>
                     <a href="#">Editar</a> | 
                     <a href="#">Deletar</a>
                 </td>                    
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Titulo ...</td>
-                <td>xablau</td>
-                <td>Thiago</td>
-                <td>11/04/2019</td>
-                <td>
-                    <a href="#">Editar</a> | 
-                    <a href="#">Deletar</a>
-                </td>                    
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Titulo ...</td>
-                <td>xablau</td>
-                <td>Thiago</td>
-                <td>11/04/2019</td>
-                <td>
-                    <a href="#">Editar</a> | 
-                    <a href="#">Deletar</a>
-                </td>                    
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Titulo ...</td>
-                <td>xablau</td>
-                <td>Thiago</td>
-                <td>11/04/2019</td>
-                <td>
-                    <a href="#">Editar</a> | 
-                    <a href="#">Deletar</a>
-                </td>                    
-            </tr>
-            
+            </tr> 
         </tbody>
     </table>
 </div>
@@ -60,6 +22,6 @@
 
 <script>
     export default {
-        props: ['titulos'],
+        props: ['titulos', 'itens'],
     }
 </script>
