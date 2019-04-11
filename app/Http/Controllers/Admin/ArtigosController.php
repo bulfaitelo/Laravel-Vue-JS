@@ -15,7 +15,7 @@ class ArtigosController extends Controller
     public function index()
     {
         //
-        return 'xablau';
+        return view('admin.artigos.index');
     }
 
     /**
